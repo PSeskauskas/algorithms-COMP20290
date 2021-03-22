@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -41,13 +41,13 @@
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\wk3-russianPeasant" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.quickSortEnhanced">
-    <configuration name="fibonacciIterative" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical3.fibonacciIterative" />
+  <component name="RunManager">
+    <configuration name="bruteForceSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practical7.bruteForceSearch" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Practical3.*" />
+          <option name="PATTERN" value="Practical7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -61,6 +61,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Practical3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="knuthMorrisPrattSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practical7.knuthMorrisPrattSearch" />
+      <module name="algorithms20290-2021-repository-PSeskauskas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Practical7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,26 +115,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="russianPeasant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical2.russianPeasant" />
-      <module name="algorithms20290-2021-repository-PSeskauskas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Practical2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.knuthMorrisPrattSearch" />
+        <item itemvalue="Application.bruteForceSearch" />
         <item itemvalue="Application.quickSortEnhanced" />
         <item itemvalue="Application.quickSort" />
         <item itemvalue="Application.fibonacciRecursive" />
-        <item itemvalue="Application.fibonacciIterative" />
-        <item itemvalue="Application.russianPeasant" />
       </list>
     </recent_temporary>
   </component>
