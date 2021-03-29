@@ -41,13 +41,13 @@
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\wk3-russianPeasant" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="bruteForceSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical7.bruteForceSearch" />
+  <component name="RunManager" selected="Application.Trie$TrieNode">
+    <configuration name="Trie$TrieNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practical8.Trie$TrieNode" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Practical7.*" />
+          <option name="PATTERN" value="Practical8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,12 +55,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="fibonacciRecursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical3.fibonacciRecursive" />
+    <configuration name="bruteForceSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practical7.bruteForceSearch" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Practical3.*" />
+          <option name="PATTERN" value="Practical7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Trie$TrieNode" />
         <item itemvalue="Application.knuthMorrisPrattSearch" />
         <item itemvalue="Application.bruteForceSearch" />
         <item itemvalue="Application.quickSortEnhanced" />
         <item itemvalue="Application.quickSort" />
-        <item itemvalue="Application.fibonacciRecursive" />
       </list>
     </recent_temporary>
   </component>
