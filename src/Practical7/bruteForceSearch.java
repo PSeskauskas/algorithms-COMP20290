@@ -1,26 +1,34 @@
 package Practical7;
 
+import util.StdOut;
+
+/* @Author: Patrikas Seskauskas (19369726) */
+
 public class bruteForceSearch {
+    /**
+     * Brute force search checks if each character in the pattern matches a subsequence of the string, if not, the search
+     * starts all over again at the next index in the search string.
+     *
+     * @param txt the string to be checked for a pattern
+     * @param pat the pattern string
+     * @return an integer representing the found starting index of the pattern in the string, if the pattern isn't found
+     * return -1
+     */
     public static int search(String txt, String pat)
     {
-        //Store the lengths of the two strings
         int n = txt.length();
         int m = pat.length();
-        //Loop until the index of (txt length - pattern length) is reached
         for(int i = 0; i <= n - m; i++) {
             int j;
             for(j = 0; j < m; j++) {
-                //If the characters don't match, then break the nested loop and increment i
                 if(txt.charAt(i + j) != pat.charAt(j)) {
                     break;
                 }
             }
-            //If j equals m, then return the starting index of where the pattern is found
             if(j == m) {
                 return i;
             }
         }
-        //Return -1 if the pattern isn't found
         return -1;
     }
 
@@ -30,10 +38,10 @@ public class bruteForceSearch {
         String pat = "ABABCABAB";
         int index = search(txt, pat);
         if(index == -1) {
-            System.out.println("Pattern not found");
+            StdOut.println("Pattern not found");
         }
         else {
-            System.out.println("Pattern starts at index " + index);
+            StdOut.println("Pattern starts at index " + index);
         }
     }
 }

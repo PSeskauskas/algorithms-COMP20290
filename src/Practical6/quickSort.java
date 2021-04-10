@@ -1,51 +1,69 @@
 package Practical6;
+import util.StdOut;
 import util.Stopwatch;
 import util.generateRandomArray;
 
 import java.util.Arrays;
 
+/* @Author: Patrikas Seskauskas (19369726) */
+
 public class quickSort {
-    /* Array is the input to be sorted, start is the starting index, end is the end index */
+    /**
+     * Sort works recursively. First finding the pivot element, and then recursively sorting the subarrays before and
+     * after the pivot, once the two subarrays are fully sorted, the array is fully sorted.
+     *
+     * @param array to be sorted
+     * @param start the first index of the array
+     * @param end the final index of the array
+     */
     public static void sort(int[] array, int start, int end) {
-        /* Base case for this recursive function */
         if(start < end) {
-            /* Piv is the partitioning index */
             int piv = partition(array, start, end);
-            /* Sort before piv */
             sort(array, start, piv - 1);
-            /* Sort after piv */
             sort(array, piv + 1, end);
         }
     }
-    /* Array is partitioned so that every element to the left of the pivot, is smaller than the pivot and every element
-    * to the right of the pivot is greater than the pivot */
+
+    /**
+     * Partition the array to be sorted so that every element to the left of the pivot is smaller than the pivot and every
+     * element to the right of the pivot is greater than the pivot. Swaps are done using the swap helper method.
+     *
+     * @param array to be partitioned
+     * @param start the starting index
+     * @param end the ending index
+     * @return the index of the pivot
+     */
     public static int partition(int[] array, int start, int end) {
-        /* Pivot holds the element to be placed in the correct position */
         int pivot = array[end];
         int pi = start;
         for(int j = start; j <= end - 1; j++) {
-            /* If the element at index j is less than the pivot, swap the elements at indexes pi and j and increment pi */
             if(array[j] < pivot) {
                 swap(array, pi, j);
                 pi++;
             }
         }
-        /* Swap elements at index pi and end and return the index pi */
         swap(array, pi, end);
         return pi;
     }
-    /* Helper Function: Swap elements at index i and j */
+
+    /**
+     * Swap helper method to swap the elements at two indexes of the array
+     *
+     * @param array containing the elements to be sorted
+     * @param i the index of the variable to be swapped
+     * @param j the index of the variable to be swapped
+     */
     public static void swap(int[] array, int i, int j) {
         int temp = array[j];
         array[j] = array[i];
         array[i] = temp;
     }
+
     public static void main(String[] args) {
-        /* Generate a random array of size N */
         int[] array = generateRandomArray.generateArray(100000);
         Stopwatch timer = new Stopwatch();
         sort(array, 0, array.length - 1);
-        System.out.println(Arrays.toString(array));
-        System.out.println("elapsed time = " + timer.elapsedTime());
+        StdOut.println(Arrays.toString(array));
+        StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

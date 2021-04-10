@@ -4,14 +4,21 @@ import util.StdOut;
 import util.Stopwatch;
 import util.generateRandomArray;
 
-/* Java implementation of the Russian Peasant multiplication algorithm. The algorithm takes in two integers a and b,
-* the current value of a is appended to the result variable with each iteration of the while loop, if and only if by is
-* an odd value. Double the value of a and half the value of b and continue while the value of b is not equal to zero.
-*
-* @Author: Patrikas Seskauskas */
+/* @Author: Patrikas Seskauskas (19369726) */
 
 public class russianPeasant {
+
     private russianPeasant() {}
+
+    /**
+     * Java implementation of the Russian Peasant algorithm. Current value of a is appended to the result variable with
+     * each iteration of the while loop, iff it is an odd value. Double the value of a and half the value of b and continue
+     * whilst the value of b does not equal 0.
+     *
+     * @param a an integer variable
+     * @param b an integer variable
+     * @return the product of a and b
+     */
     public static int calculation(int a, int b) {
         int result = 0;
         while(b != 0) {

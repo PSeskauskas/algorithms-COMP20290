@@ -1,18 +1,21 @@
 package Practical4;
 
+import util.StdOut;
 import util.Stopwatch;
 import util.generateRandomArray;
 
 import java.util.Arrays;
 
-/* Selection sort finds the smallest value in the array and swaps it with the element at index 0
- * Then it finds the second smallest value and swaps it with the element at index 1
- * Then it finds the third smallest value and swaps it with the element at index 2 and so on
- * continuing until the array is sorted fully
- *
- * @Author: Patrikas Seskauskas */
+/* @Author: Patrikas Seskauskas (19369726) */
 
 public class selectionSort {
+    /**
+     * Java implementation of the selection sort algorithm. Selection sort finds the smallest value in the array and swaps
+     * it with the element at index 0. Then it finds the second smallest value and swaps it with the element at index 1
+     * and so on. This process continues until the array is fully sorted.
+     *
+     * @param array to be sorted
+     */
     public static void sort(int[] array) {
         int min;
         int temp;
@@ -32,7 +35,7 @@ public class selectionSort {
         Stopwatch timer = new Stopwatch();
         int[] a = generateRandomArray.generateArray(1000);
         sort(a);
-        System.out.println(Arrays.toString(a));
-        System.out.println("elapsed time = " + timer.elapsedTime());
+        StdOut.println(Arrays.toString(a));
+        StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

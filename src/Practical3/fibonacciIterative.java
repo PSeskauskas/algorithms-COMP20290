@@ -3,13 +3,16 @@ package Practical3;
 import util.StdOut;
 import util.Stopwatch;
 
-/* Iterative Java implementation of the Fibonacci sequence, taking in a number N and returning the Nth term of the
-* Fibonacci sequence. Iteratively adding the two previous numbers in the sequence to obtain the current number of the
-* sequence.
-*
-* @Author: Patrikas Seskauskas */
+/* @Author: Patrikas Seskauskas (19369726) */
 
 public class fibonacciIterative {
+    /**
+     * Iterative Java implementation of the Fibonacci sequence, the method adds the two previous numbers in the sequence
+     * to obtain the current number of the sequence
+     *
+     * @param n an integer variable
+     * @return the nth number in the fibonacci sequence
+     */
     static int fibonacci(int n) {
         if (n<=1)
             return 1;

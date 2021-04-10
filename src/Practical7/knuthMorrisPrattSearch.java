@@ -1,38 +1,37 @@
 package Practical7;
 
+import util.StdOut;
+
+/* @Author: Patrikas Seskauskas (19369726) */
+
 public class knuthMorrisPrattSearch {
+    /**
+     * Java implementation of the Knuth-Morris-Pratt search algorithm. The algorithm works by computing the longest prefix
+     * suffix array for the pattern. Comparing the characters of each array, if the characters match, increment the two
+     * indexes, else, compute a jump to be made in the search string. This algorithm is better than brute force because
+     * in brute force the algorithm wouldn't jump if the characters didn't match. The method prints out the index of the
+     * start of the pattern in the search string if it is found
+     *
+     * @param pat the pattern string
+     * @param txt the search string
+     */
     public static void knuthMorrisPratt (String pat, String txt)
     {
-        //Store the lengths of the two strings
         int M = pat.length();
         int N = txt.length();
-
-        //create lps[] that will hold the longest prefix suffix values for pat string
         int lps[] = new int[M];
-
-        //index for pat string
         int j = 0;
-
-        //Preprocess the pattern (calculate lps[] array)
         computeLPSArray(pat, M, lps);
-
-        //Create an index for the string
         int i = 0;
-
-        //Loop until i equals N
         while(i < N) {
-            //If pat[j] equals txt[i], increment the indexes
             if(pat.charAt(j) == txt.charAt(i)) {
                 i++;
                 j++;
             }
-            //If j equals M, print out the index of the match and compute the jump
             if(j == M) {
-                System.out.println("Found pattern " + "at index " + (i - j));
+                StdOut.println("Found pattern " + "at index " + (i - j));
                 j = lps[j - 1];
             }
-            //If i less than N and the characters of the strings don't match, compute the jump if j isn't 0 or increment
-            //the index i.
             else if(i < N && pat.charAt(j) != txt.charAt(i)) {
                 if(j != 0) {
                     j = lps[j - 1];
@@ -44,30 +43,30 @@ public class knuthMorrisPrattSearch {
         }
     }
 
+    /**
+     * Method to compute the longest prefix suffix array to be used in the Knuth-Morris-Pratt algorithm. The longest
+     * prefix suffix will be used as the jump when a character mismatch occurs in the search.
+     *
+     * @param pat the pattern string
+     * @param M the size of the longest prefix suffix array
+     * @param lps the array containing the longest prefix suffixes
+     */
     public static void computeLPSArray(String pat, int M, int lps[])
     {
-        //length of the previous longest prefix suffix
         int len = 0;
         int i = 1;
-        //lps[0] is always 0
         lps[0] = 0;
-
-        //Loop until i = M
         while (i < M) {
-            //If characters are equal at indexes i and len, increment the indexes and update the lps array
             if (pat.charAt(i) == pat.charAt(len)) {
                 len++;
                 lps[i] = len;
                 i++;
             }
-            //Else if the characters at indexes i and len aren't equal, execute this code
             else
             {
-                //If len isn't 0, update the len variable with the corresponding index of the lps array
                 if(len != 0) {
                     len = lps[len - 1];
                 }
-                //Else, update the lps array and increment the variable i
                 else
                 {
                     lps[i] = len;

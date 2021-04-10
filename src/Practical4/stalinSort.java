@@ -1,16 +1,21 @@
 package Practical4;
 
+import util.StdOut;
 import util.Stopwatch;
 import util.generateRandomArray;
 
 import java.util.Arrays;
 
-/* Stalin sort searches an array, and if an element is not in the correct order, i.e. the current element is not
- * greater than the previous element, then that current element is removed from the array entirely
- *
- * @Author: Patrikas Seskauskas */
+/* @Author: Patrikas Seskauskas (19369726) */
 
 public class stalinSort {
+    /**
+     * Java implementation of the Stalin sort algorithm. Stalin sort searches an array, if the current element is not
+     * greater than the previous element, then that current element is removed from the array entirely.
+     *
+     * @param array to be sorted
+     * @return a new integer array
+     */
     public static int[] sort(int[] array) {
         int temp = array[0];
         int count = 1;
@@ -38,11 +43,10 @@ public class stalinSort {
         }
         return copy;
     }
-
     public static void main(String[] args) {
         int[] array = generateRandomArray.generateArray(100);
         Stopwatch timer = new Stopwatch();
-        System.out.println(Arrays.toString(sort(array)));
-        System.out.println("elapsed time = " + timer.elapsedTime());
+        StdOut.println(Arrays.toString(sort(array)));
+        StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

@@ -3,12 +3,16 @@ package Practical3;
 import util.StdOut;
 import util.Stopwatch;
 
-/* Recursive Java implementation of the Fibonacci sequence. My implementation uses double recursion to obtain the Nth
-* value of the fibonacci sequence. The Nth term is obtained by adding the two previous terms in the sequence.
-*
-* @Author: Patrikas Seskauskas */
+/* @Author: Patrikas Seskauskas (19369726) */
 
 public class fibonacciRecursive {
+    /**
+     * Recursive Java implementation of the Fibonacci sequence. This implementation uses double recursion, by recursively
+     * adding the two previous terms in the sequence.
+     *
+     * @param n an integer variable
+     * @return the nth number in the fibonacci sequence
+     */
     static int fibonacci(int n) {
         if(n <= 1) {
             return n;

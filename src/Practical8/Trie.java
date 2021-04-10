@@ -1,19 +1,22 @@
 package Practical8;
 
-/* Java implementation of search and insert operations on a Trie */
+import util.StdOut;
+
+/* @Author: Patrikas Seskauskas (19369726) */
+
 public class Trie {
     /* 26 characters in English alphabet */
     static final int ALPHABET_SIZE = 26;
 
-    /* Class for TrieNode */
+    /**
+     * Nested TrieNode class
+     */
     static class TrieNode {
         TrieNode[] children = new TrieNode[ALPHABET_SIZE];
-        /* isEndOfWord is true if the node represents end of a word, i.e., a leaf node */
         boolean isEndOfWord;
 
         TrieNode() {
             isEndOfWord = false;
-
             for(int i = 0; i < ALPHABET_SIZE; i++) {
                 children[i] = null;
             }
@@ -21,14 +24,17 @@ public class Trie {
 
         static TrieNode root;
 
-        /* If not key present, inserts into trie, If the key is a prefix of a Trie node, mark as a leaf node */
+        /**
+         * insert inserts the string into the trie if it isn't already in the trie. If the string is a prefix of a Trie
+         * node, then mark the string as a leaf node.
+         *
+         * @param key to be entered in to the Trie
+         */
         static void insert(String key) {
             int level;
             int length = key.length();
             int index;
-
             TrieNode searchNode = root;
-
             for(level = 0; level < length; level++) {
                 index = key.charAt(level) - 'a';
                 if(searchNode.children[index] == null) {
@@ -36,70 +42,63 @@ public class Trie {
                 }
                 searchNode = searchNode.children[index];
             }
-
-            /* Mark the last node as a leaf node */
             searchNode.isEndOfWord = true;
         }
 
-        /* Returns true if key is present in trie, else, return false */
+        /**
+         * Method searches for the key string in the try, if it is found, return true, if it isn't return false.
+         *
+         * @param key a string variable to be searched in the Trie
+         * @return a boolean representing if the string is found in the Trie or not
+         */
         static boolean search(String key) {
             int level;
             int length = key.length();
             int index;
             TrieNode searchNode = root;
-
             for(level = 0; level < length; level++) {
                 index = key.charAt(level) - 'a';
-
                 if(searchNode.children[index] == null) {
                     return false;
                 }
-
                 searchNode = searchNode.children[index];
             }
-
             return (searchNode != null && searchNode.isEndOfWord);
         }
 
-        /* Main method */
         public static void main(String[] args) {
             String[] keys = {"bank", "book", "bar", "bring", "film", "filter", "simple", "silt", "silver"};
-
             String[] output = {"Not present in trie", "Present in trie"};
-
             root = new TrieNode();
-
-            /* Construct trie */
             int i;
+
             for(i = 0; i < keys.length; i++) {
                 insert(keys[i]);
             }
 
-            /* Search for different keys */
             if(search("bar")) {
-                System.out.println("bar - " + output[1]);
+                StdOut.println("bar - " + output[1]);
             } else {
-                System.out.println("bar - " + output[0]);
+                StdOut.println("bar - " + output[0]);
             }
 
             if(search("film")) {
-                System.out.println("film - " + output[1]);
+                StdOut.println("film - " + output[1]);
             } else {
-                System.out.println("film - " + output[0]);
+                StdOut.println("film - " + output[0]);
             }
 
             if(search("boo")) {
-                System.out.println("boo - " + output[1]);
+                StdOut.println("boo - " + output[1]);
             } else {
-                System.out.println("boo - " + output[0]);
+                StdOut.println("boo - " + output[0]);
             }
 
             if(search("ban")) {
-                System.out.println("ban - " + output[1]);
+                StdOut.println("ban - " + output[1]);
             } else {
-                System.out.println("ban - " + output[0]);
+                StdOut.println("ban - " + output[0]);
             }
-
         }
     }
 }

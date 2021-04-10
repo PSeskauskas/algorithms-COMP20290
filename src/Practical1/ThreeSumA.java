@@ -11,7 +11,6 @@ import util.In;
 import util.StdOut;
 import util.Stopwatch;
 
-import java.util.Arrays;
 import java.lang.*;
 
 public class ThreeSumA {
