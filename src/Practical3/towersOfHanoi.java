@@ -2,7 +2,7 @@ package Practical3;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 
-import util.StdOut;
+import Util.StdOut;
 
 public class towersOfHanoi {
     /**

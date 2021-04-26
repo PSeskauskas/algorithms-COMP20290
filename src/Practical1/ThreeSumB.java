@@ -17,9 +17,9 @@ package Practical1;
  *
  ******************************************************************************/
 
-import util.In;
-import util.StdOut;
-import util.Stopwatch;
+import Util.In;
+import Util.StdOut;
+import Util.Stopwatch;
 
 import java.util.Arrays;
 import java.lang.*;

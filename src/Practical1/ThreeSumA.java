@@ -7,9 +7,9 @@ package Practical1;
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  ******************************************************************************/
-import util.In;
-import util.StdOut;
-import util.Stopwatch;
+import Util.In;
+import Util.StdOut;
+import Util.Stopwatch;
 
 import java.lang.*;
 

@@ -18,7 +18,7 @@ Clone the repository into your IDE.
  <br> Therefore, each algorithm can be built and run separately.
 
 ### Util package 
-The [util](./src/util) package in [src](./src) contains all helper classes needed to run each algorithm, i.e., reading in standard input, generating a random array of size N, stopwatch etc.
+The [Util](src/Util) package in [src](./src) contains all helper classes needed to run each algorithm, i.e., reading in standard input, generating a random array of size N, stopwatch etc.
 
 ### Data package
 The [data](./data) package contains all the different size int files that can be used to test certain algorithms. The file sizes range from 8 ints - 16k ints.

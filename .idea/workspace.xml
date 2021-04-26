@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b7c422b-8ceb-4a8e-997b-2700a172ff98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practical1/ThreeSumA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical1/ThreeSumA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical1/ThreeSumB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical1/ThreeSumB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practical2/russianPeasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical2/russianPeasant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practical3/fibonacciIterative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical3/fibonacciIterative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practical3/fibonacciRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical3/fibonacciRecursive.java" afterDir="false" />
@@ -18,7 +20,11 @@
       <change beforePath="$PROJECT_DIR$/src/Practical7/bruteForceSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical7/bruteForceSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practical7/knuthMorrisPrattSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical7/knuthMorrisPrattSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Practical8/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical8/Trie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/generateRandomArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/generateRandomArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/In.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/In.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/StdIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/StdIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/StdOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/StdOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Stopwatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Stopwatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/generateRandomArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/generateRandomArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +62,51 @@
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\wk6-mergeSort" />
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\wk3-russianPeasant" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\src\Practical9" />
+      <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\data" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Trie$TrieNode">
+  <component name="RunManager" selected="Application.quickSortEnhanced">
+    <configuration name="HuffmanAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignment.HuffmanAlgorithm" />
+      <module name="algorithms20290-2021-repository-PSeskauskas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunLength" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.RunLength" />
+      <module name="algorithms20290-2021-repository-PSeskauskas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunLengthEncoding" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practical9.RunLengthEncoding" />
+      <module name="algorithms20290-2021-repository-PSeskauskas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Trie$TrieNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Practical8.Trie$TrieNode" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
@@ -71,49 +120,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="bruteForceSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical7.bruteForceSearch" />
-      <module name="algorithms20290-2021-repository-PSeskauskas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Practical7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="knuthMorrisPrattSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical7.knuthMorrisPrattSearch" />
-      <module name="algorithms20290-2021-repository-PSeskauskas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Practical7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mergeSort" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="MAIN_CLASS_NAME" value="Practical5.mergeSort" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="quickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical6.quickSort" />
-      <module name="algorithms20290-2021-repository-PSeskauskas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Practical6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Trie$TrieNode" />
-        <item itemvalue="Application.knuthMorrisPrattSearch" />
-        <item itemvalue="Application.bruteForceSearch" />
         <item itemvalue="Application.quickSortEnhanced" />
-        <item itemvalue="Application.quickSort" />
+        <item itemvalue="Application.RunLength" />
+        <item itemvalue="Application.HuffmanAlgorithm" />
+        <item itemvalue="Application.RunLengthEncoding" />
+        <item itemvalue="Application.Trie$TrieNode" />
       </list>
     </recent_temporary>
   </component>

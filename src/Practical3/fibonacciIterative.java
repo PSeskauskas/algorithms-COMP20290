@@ -1,7 +1,7 @@
 package Practical3;
 
-import util.StdOut;
-import util.Stopwatch;
+import Util.StdOut;
+import Util.Stopwatch;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 

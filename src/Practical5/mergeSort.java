@@ -1,7 +1,7 @@
 package Practical5;
 
 import java.util.Arrays;
-import util.*;
+import Util.*;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 

@@ -1,8 +1,8 @@
 package Practical5;
 
-import util.StdOut;
-import util.Stopwatch;
-import util.generateRandomArray;
+import Util.StdOut;
+import Util.Stopwatch;
+import Util.generateRandomArray;
 import Practical4.insertionSort;
 
 import java.util.Arrays;

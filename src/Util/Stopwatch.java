@@ -1,4 +1,4 @@
-package util; /******************************************************************************
+package Util; /******************************************************************************
  *  Compilation:  javac Stopwatch.java
  *  Execution:    java Stopwatch n
  *  Dependencies: none

@@ -1,4 +1,4 @@
-package util; /******************************************************************************
+package Util; /******************************************************************************
  *  Compilation:  javac StdOut.java
  *  Execution:    java StdOut
  *  Dependencies: none

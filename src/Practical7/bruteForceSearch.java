@@ -1,6 +1,6 @@
 package Practical7;
 
-import util.StdOut;
+import Util.StdOut;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 

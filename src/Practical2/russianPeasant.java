@@ -1,8 +1,8 @@
 package Practical2;
 
-import util.StdOut;
-import util.Stopwatch;
-import util.generateRandomArray;
+import Util.StdOut;
+import Util.Stopwatch;
+import Util.generateRandomArray;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 
