@@ -13,7 +13,7 @@ public class fibonacciIterative {
      * @param n an integer variable
      * @return the nth number in the fibonacci sequence
      */
-    static int fibonacci(int n) {
+    public static int fibonacci(int n) {
         if (n<=1)
             return 1;
 
