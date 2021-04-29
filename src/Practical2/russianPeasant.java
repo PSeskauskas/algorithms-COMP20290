@@ -38,7 +38,7 @@ public class russianPeasant {
         boolean finished = false;
 
         while(!finished) {
-            StdOut.print("Please choose\n1. to generate a random array of number to run the algorithm on on\n2. To enter " +
+            StdOut.print("Please choose\n1. To generate a random array of numbers to run the algorithm on on\n2. To enter " +
                     "two numbers of your choice\n");
             int pick = StdIn.readInt();
 

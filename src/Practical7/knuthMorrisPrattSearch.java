@@ -1,6 +1,10 @@
 package Practical7;
 
+import Util.StdIn;
 import Util.StdOut;
+import Util.Stopwatch;
+
+import java.util.Scanner;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 
@@ -76,10 +80,27 @@ public class knuthMorrisPrattSearch {
         }
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        String txt = "ABABDABACDABABCABAB";
-        String pat = "ABABCABAB";
+        String txt = "";
+        String pat = "";
+        Scanner readLine = new Scanner(System.in);
+        while(txt.length() < 1) {
+            StdOut.println("Please enter the string to be searched here");
+            txt = readLine.nextLine().trim().toUpperCase();
+            if(txt.length() < 1) {
+                StdOut.println("Error, please enter a valid string");
+            }
+        }
+        while(pat.length() < 1) {
+            StdOut.println("Please enter the search string here");
+            pat = readLine.nextLine().trim().toUpperCase();
+            if(pat.length() < 1) {
+                StdOut.println("Error, please enter a valid string");
+            }
+        }
+        Stopwatch timer = new Stopwatch();
         knuthMorrisPratt(pat, txt);
+        StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

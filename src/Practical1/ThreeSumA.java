@@ -52,7 +52,7 @@ public class ThreeSumA {
      * @param args the command-line arguments
      */
     public static void main(String[] args)  {
-        In in = new In("data/4Kints.txt");
+        In in = new In(args[0]);
         int[] a = in.readAllInts();
 
         //Helper file to measure time count function takes to run
