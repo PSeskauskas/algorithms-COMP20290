@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4b7c422b-8ceb-4a8e-997b-2700a172ff98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical3/fibonacciIterative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical3/fibonacciIterative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical3/fibonacciRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical3/fibonacciRecursive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical3/towersOfHanoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical3/towersOfHanoi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical4/insertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical4/insertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical4/selectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical4/selectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical4/stalinSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical4/stalinSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical5/mergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical5/mergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical5/mergeSortEnhanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical5/mergeSortEnhanced.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical6/quickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical6/quickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical6/quickSortEnhanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical6/quickSortEnhanced.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1nZXjoYYnRNSTNYjER04X4vW3bD" />
   <component name="ProjectViewState">

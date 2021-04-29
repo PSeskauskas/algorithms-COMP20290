@@ -1,5 +1,6 @@
 package Practical4;
 
+import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 import Util.generateRandomArray;
@@ -44,9 +45,16 @@ public class stalinSort {
         return copy;
     }
     public static void main(String[] args) {
-        int[] array = generateRandomArray.generateArray(100);
+        int size = -1;
+        while(size < 1) {
+            StdOut.println("Please enter the size of the randomly generated array here");
+            size = StdIn.readInt();
+        }
+        int[] array = generateRandomArray.generateArray(size);
+        StdOut.println("Unsorted array: " + Arrays.toString(array));
         Stopwatch timer = new Stopwatch();
-        StdOut.println(Arrays.toString(sort(array)));
+        int[] sorted = sort(array);
+        StdOut.println("Sorted array: " + Arrays.toString(sorted));
         StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

@@ -1,6 +1,7 @@
 package Practical6;
 
 import Practical4.insertionSort;
+import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 import Util.generateRandomArray;
@@ -106,11 +107,17 @@ public class quickSortEnhanced {
     }
 
     public static void main(String[] args) {
-        int[] array = generateRandomArray.generateArray(100000);
-        Stopwatch timer = new Stopwatch();
+        int size = -1;
+        while(size < 1) {
+            StdOut.println("Please enter the size of the randomly generated array here");
+            size = StdIn.readInt();
+        }
+        int[] array = generateRandomArray.generateArray(size);
         shuffle(array);
+        StdOut.println("Unsorted array: " + Arrays.toString(array));
+        Stopwatch timer = new Stopwatch();
         sort(array, 0, array.length - 1);
-        StdOut.println(Arrays.toString(array));
+        StdOut.println("Sorted array: " + Arrays.toString(array));
         StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

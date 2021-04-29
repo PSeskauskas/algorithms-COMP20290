@@ -1,5 +1,6 @@
 package Practical4;
 
+import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 import Util.generateRandomArray;
@@ -32,10 +33,16 @@ public class selectionSort {
         }
     }
     public static void main(String[] args) {
+        int size = -1;
+        while(size < 1) {
+            StdOut.println("Please enter the size of the randomly generated array here");
+            size = StdIn.readInt();
+        }
+        int[] array = generateRandomArray.generateArray(size);
+        StdOut.println("Unsorted array: " + Arrays.toString(array));
         Stopwatch timer = new Stopwatch();
-        int[] a = generateRandomArray.generateArray(1000);
-        sort(a);
-        StdOut.println(Arrays.toString(a));
+        sort(array);
+        StdOut.println("Sorted array: " + Arrays.toString(array));
         StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }
