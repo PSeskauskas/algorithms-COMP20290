@@ -1,8 +1,11 @@
 package Practical2;
 
+import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 import Util.generateRandomArray;
+
+import java.util.Arrays;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 
@@ -31,13 +34,45 @@ public class russianPeasant {
         return result;
     }
 
-    public static void main(String[] args)  {
-        int[] a = generateRandomArray.generateArray(8);
-        Stopwatch timer = new Stopwatch();
-        for(int i = 0; i < a.length - 1; i++) {
-            StdOut.println(a[i] + " x " + a[i + 1]);
-            StdOut.println(calculation(a[i], a[i + 1]));
+    public static void main(String[] args) {
+        boolean finished = false;
+
+        while(!finished) {
+            StdOut.print("Please choose\n1. to generate a random array of number to run the algorithm on on\n2. To enter " +
+                    "two numbers of your choice\n");
+            int pick = StdIn.readInt();
+
+            if (pick == 1) {
+                int size = -1;
+                while(size < 1) {
+                    StdOut.println("Please enter the size of the randomly generated array here");
+                    size = StdIn.readInt();
+                }
+                int[] a = generateRandomArray.generateArray(size);
+                StdOut.println(Arrays.toString(a));
+                Stopwatch timer = new Stopwatch();
+                for (int i = 0; i < a.length - 1; i++) {
+                    StdOut.println(a[i] + " x " + a[i + 1]);
+                    StdOut.println(calculation(a[i], a[i + 1]));
+                }
+                StdOut.println("elapsed time for entire array = " + timer.elapsedTime());
+                finished = true;
+            }
+
+            else if (pick == 2) {
+                StdOut.print("Please enter the two integers you would like to multiply\n");
+                int first = StdIn.readInt();
+                int second = StdIn.readInt();
+                StdOut.println(first + " x " + second);
+                Stopwatch timer = new Stopwatch();
+                StdOut.println(calculation(first, second));
+                StdOut.println("elapsed time = " + timer.elapsedTime());
+                finished = true;
+            }
+
+            else {
+                StdOut.println("Error, you must select a valid option");
+            }
         }
-        StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }
