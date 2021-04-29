@@ -1,5 +1,6 @@
 package Practical3;
 
+import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 
@@ -21,9 +22,10 @@ public class fibonacciRecursive {
     }
     public static void main (String[] args)
     {
-        int n = 10;
+        StdOut.println("Please enter the nth term of the fibonacci sequence here");
+        int n = StdIn.readInt();
         Stopwatch timer = new Stopwatch();
-        System.out.println(fibonacci(n));
+        StdOut.println("Element at position " + n + ": " + fibonacci(n));
         StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

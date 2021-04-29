@@ -2,7 +2,9 @@ package Practical3;
 
 /* @Author: Patrikas Seskauskas (19369726) */
 
+import Util.StdIn;
 import Util.StdOut;
+import Util.Stopwatch;
 
 public class towersOfHanoi {
     /**
@@ -23,7 +25,13 @@ public class towersOfHanoi {
         }
     }
     public static void main(String[] args) {
-        int n = 5;
-        towers(n, 'A', 'C', 'B');
+        int numDisks = -1;
+        while(numDisks < 0) {
+            StdOut.println("Please enter the number of disks you'd like to move from peg A to peg C");
+            numDisks = StdIn.readInt();
+        }
+        Stopwatch timer = new Stopwatch();
+        towers(numDisks, 'A', 'C', 'B');
+        StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }

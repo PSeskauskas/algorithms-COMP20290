@@ -8,7 +8,7 @@ public class Main {
         runMenu(StdIn.readInt());
     }
     public static void displayMenu() {
-        StdOut.print("\nAvailable options for you to run are listed below\n" +
+        StdOut.println("\nAvailable options for you to run are listed below\n" +
                 "0. Exit the program\n" +
                 "1. Three Sum - Find the number of triples that sum to 0 in an input data file\n" +
                 "2. Russian Peasants - Russian Peasants algorithm implementation\n" +

@@ -1,5 +1,6 @@
 package Practical3;
 
+import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 
@@ -16,23 +17,27 @@ public class fibonacciIterative {
     public static int fibonacci(int n) {
         if (n<=1)
             return 1;
-
+        StringBuilder sequence = new StringBuilder();
         int fib = 1;
         int prevFib =  1;
+        sequence.append(fib).append(", ").append(prevFib);
 
         for (int i = 2; i < n; i++) {
             int temp = fib;
             fib = fib + prevFib;
             prevFib = temp;
+            sequence.append(", ").append(fib);
         }
+        StdOut.println(sequence.toString());
         return fib;
     }
 
     public static void main (String args[])
     {
-        int n = 10;
+        StdOut.println("Please enter the nth term of the fibonacci sequence here");
+        int n = StdIn.readInt();
         Stopwatch timer = new Stopwatch();
-        System.out.println(fibonacci(n));
+        StdOut.println("Element at position " + n + ": " + fibonacci(n));
         StdOut.println("elapsed time = " + timer.elapsedTime());
     }
 }
