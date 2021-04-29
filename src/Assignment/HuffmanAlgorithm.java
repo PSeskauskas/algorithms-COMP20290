@@ -95,6 +95,15 @@ public class HuffmanAlgorithm {
         // decode using the Huffman trie
         int i = 0;
         while(i < numberOfBytes) {
+            Node node = root;
+            while(!node.isLeaf()) {
+                if(!BinaryStdIn.readBoolean()) {
+                    node = node.left;
+                } else {
+                    node = node.right;
+                }
+            }
+            BinaryStdOut.write(node.ch, 8);
             i++;
         }
         BinaryStdOut.close();
