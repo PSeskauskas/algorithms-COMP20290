@@ -52,7 +52,7 @@ public class mergeSortEnhanced {
      * @param r highest index of the array
      */
     public static void sort(int[] array, int[] aux, int l, int r) {
-        if(r <= (l + 10)) {
+        if(r <= (l + 15)) {
             insertionSort.sort(array, l, r);
             return;
         }

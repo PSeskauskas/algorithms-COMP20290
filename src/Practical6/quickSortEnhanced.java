@@ -22,7 +22,7 @@ public class quickSortEnhanced {
      * @param end the final index of the array
      */
     public static void sort(int[] array, int start, int end) {
-        if(end <= start + 10) {
+        if(end <= start + 15) {
             insertionSort.sort(array, start, end);
             return;
         }
