@@ -1,5 +1,6 @@
 package Practical8;
 
+import Util.StdIn;
 import Util.StdOut;
 
 /* @Author: Patrikas Seskauskas (19369726) */
@@ -11,11 +12,11 @@ public class Trie {
     /**
      * Nested TrieNode class
      */
-    static class TrieNode {
+    public static class TrieNode {
         TrieNode[] children = new TrieNode[ALPHABET_SIZE];
         boolean isEndOfWord;
 
-        TrieNode() {
+        public TrieNode() {
             isEndOfWord = false;
             for(int i = 0; i < ALPHABET_SIZE; i++) {
                 children[i] = null;
@@ -67,7 +68,20 @@ public class Trie {
         }
 
         public static void main(String[] args) {
-            String[] keys = {"bank", "book", "bar", "bring", "film", "filter", "simple", "silt", "silver"};
+            int size = -1;
+            while(size < 1) {
+                StdOut.println("Please enter the number of strings that will be put into the Trie here\n");
+                size = StdIn.readInt();
+            }
+            String[] keys = new String[size];
+
+            int j = 0;
+            while(j < keys.length) {
+                StdOut.println("Please enter each key one by one here");
+                keys[j] = StdIn.readString();
+                j++;
+            }
+
             String[] output = {"Not present in trie", "Present in trie"};
             root = new TrieNode();
             int i;
@@ -76,28 +90,19 @@ public class Trie {
                 insert(keys[i]);
             }
 
-            if(search("bar")) {
-                StdOut.println("bar - " + output[1]);
-            } else {
-                StdOut.println("bar - " + output[0]);
-            }
-
-            if(search("film")) {
-                StdOut.println("film - " + output[1]);
-            } else {
-                StdOut.println("film - " + output[0]);
-            }
-
-            if(search("boo")) {
-                StdOut.println("boo - " + output[1]);
-            } else {
-                StdOut.println("boo - " + output[0]);
-            }
-
-            if(search("ban")) {
-                StdOut.println("ban - " + output[1]);
-            } else {
-                StdOut.println("ban - " + output[0]);
+            String search = "";
+            while(true) {
+                StdOut.println("Please enter a string to search for in the trie, or else enter 0 to exit the Trie search program");
+                search = StdIn.readString();
+                if(search.equals("0")) {
+                    break;
+                }
+                else if(search(search)) {
+                    StdOut.println(search + " - " + output[1]);
+                }
+                else {
+                    StdOut.println(search + " - " + output[0]);
+                }
             }
         }
     }

@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b7c422b-8ceb-4a8e-997b-2700a172ff98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical1/ThreeSumA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical1/ThreeSumA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical1/ThreeSumB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical1/ThreeSumB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical2/russianPeasant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical2/russianPeasant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical7/bruteForceSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical7/bruteForceSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical7/knuthMorrisPrattSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical7/knuthMorrisPrattSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical8/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical8/Trie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -70,6 +66,7 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Tests" />
+      <recent name="Practical8" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -82,6 +79,19 @@
     </configuration>
     <configuration name="Trie$TrieNode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Practical8.Trie$TrieNode" />
+      <module name="algorithms20290-2021-repository-PSeskauskas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Practical8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Trie" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Practical8.Trie" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
       <extension name="coverage">
         <pattern>
@@ -127,28 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="bruteForceSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms20290-2021-repository-PSeskauskas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tests" />
-      <option name="MAIN_CLASS_NAME" value="Tests.bruteForceSearchTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Trie" />
         <item itemvalue="Application.russianPeasant" />
         <item itemvalue="Application.Trie$TrieNode" />
         <item itemvalue="Application.knuthMorrisPrattSearch" />
-        <item itemvalue="JUnit.bruteForceSearchTest" />
       </list>
     </recent_temporary>
   </component>
