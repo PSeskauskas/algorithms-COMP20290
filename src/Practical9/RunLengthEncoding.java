@@ -2,6 +2,8 @@ package Practical9;
 
 import Util.StdOut;
 
+import java.util.Scanner;
+
 public class RunLengthEncoding {
     public static void compress(String s) {
         int count = 1;
@@ -15,11 +17,18 @@ public class RunLengthEncoding {
                 count++;
             }
         }
+        StdOut.println();
     }
 
     public static void main(String[] args) {
-        StdOut.println("Original String: " + args[0]);
+        String string = "";
+        Scanner scanner = new Scanner(System.in);
+        while(string.length() < 1) {
+            StdOut.println("Please enter the string to be compressed here");
+            string = scanner.nextLine();
+        }
+        StdOut.println("Original String: " + string);
         StdOut.print("Compressed String: ");
-        compress(args[0]);
+        compress(string);
     }
 }

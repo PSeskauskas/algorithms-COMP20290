@@ -3,7 +3,7 @@ import Util.StdOut;
 
 public class Main {
     public static void main(String[] args) {
-        StdOut.print("|||| COMP20290 Repository by Patrikas Seskauskas ||||\n");
+        StdOut.print("|||| COMP20290 Repository by Patrikas Seskauskas - 19369726 ||||\n");
         displayMenu();
         runMenu(StdIn.readInt());
     }
@@ -33,6 +33,15 @@ public class Main {
                 StdOut.print("Exiting now.\n");
                 break;
             case 1:
+                StdOut.println("Three Sum A/B requires the use of the terminal to run these classes due to them taking " +
+                        "in input txt files.\nInput txt files are located in the data package outside of source.\nThese " +
+                        "input files range from 8 ints - 16k ints.\nEach file is listed below\n8ints.txt, 1Kints.txt, " +
+                        "2Kints.txt, 4Kints.txt, 8Kints.txt, 16Kints.txt\nTo compile either file. cd into the source " +
+                        "directory and input\n$ javac Practical1/ThreeSumA.java or $ javac Practical1/ThreeSumB.java\n" +
+                        "To run either class with one of the data files, input either of these commands as an example\n" +
+                        "$ java Practical1/ThreeSumA ../data/2Kints.txt || $java Practical1/ThreeSumB ../data/4Kints.txt\n");
+                displayMenu();
+                runMenu(StdIn.readInt());
                 break;
             case 2:
                 Practical2.russianPeasant.main(null);
@@ -126,6 +135,29 @@ public class Main {
                 runMenu(StdIn.readInt());
                 break;
             case 13:
+                while(!finished) {
+                    StdOut.println("Please choose\n1. User Input\n2. Input files");
+                    pick = StdIn.readInt();
+                    if(pick == 1) {
+                        Practical9.RunLengthEncoding.main(null);
+                        finished = true;
+                    }
+                    else if(pick == 2) {
+                        StdOut.println("To use input files on the RunLength class, the terminal will be required.\nInput " +
+                                "files are contained in the same package as the class, files are listed below.\n" +
+                                "4runs.bin, abra.txt, q32x48.bin, q64x96.bin\n" +
+                                "To compile and run RunLength/BinaryDump on these files, cd into the source directory and run the commands below.\n" +
+                                "Compile Binary Dump: $ javac util/BinaryDump.java\n" +
+                                "Compile Run Length Encoding: $ javac Practical9/RunLengthEncoding.java\n" +
+                                "Run Binary Dump on uncompressed file: $ java util/BinaryDump 40 < Practical9/4runs.bin\n" +
+                                "Run Length Compression on file in place: $ java Practical9/RunLength - < Practical9/4runs.bin | java util/BinaryDump 8\n" +
+                                "Run Length Compression to New File: $ java Practical9/RunLength - < Practical9/4runs.bin > Practical9/4runsrle.bin\n" +
+                                "Run Binary Dump on compressed file: $ java util/BinaryDump 40 < Practical9/4runsrle.bin");
+                        finished = true;
+                    }
+                }
+                displayMenu();
+                runMenu(StdIn.readInt());
                 break;
             case 14:
                 break;

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b7c422b-8ceb-4a8e-997b-2700a172ff98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/algorithms20290-2021-repository-PSeskauskas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/algorithms20290-2021-repository-PSeskauskas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Practical8/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical8/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/genomeVirus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment/genomeVirus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/medTale.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment/medTale.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mobydick.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment/mobydick.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Practical9/RunLengthEncoding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Practical9/RunLengthEncoding.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +51,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -58,6 +63,7 @@
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\wk3-russianPeasant" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\src\Assignment" />
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\src\Practical9" />
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\data" />
     </key>
