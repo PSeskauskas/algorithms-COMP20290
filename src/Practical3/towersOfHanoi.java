@@ -1,6 +1,10 @@
 package Practical3;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical3/towersOfHanoi.java
+ *  Execution: java Practical3/towersOfHanoi
+ *  */
 
 import Util.StdIn;
 import Util.StdOut;
@@ -24,6 +28,11 @@ public class towersOfHanoi {
             towers(disk - 1, auxiliary, dest, source);
         }
     }
+
+    /**
+     * The user is prompted to enter the number of disks to transfer from peg A to peg C with error testing
+     * @param args
+     */
     public static void main(String[] args) {
         int numDisks = -1;
         while(numDisks < 0) {

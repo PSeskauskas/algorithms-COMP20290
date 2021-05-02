@@ -6,7 +6,11 @@ import Util.Stopwatch;
 
 import java.util.Scanner;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical7/knuthMorrisPrattSearch.java
+ *  Execution: java Practical7/knuthMorrisPrattSearch
+ *  */
 
 public class knuthMorrisPrattSearch {
     /**
@@ -80,6 +84,12 @@ public class knuthMorrisPrattSearch {
         }
     }
 
+    /**
+     * The user is prompted to enter valid strings to be used in the searching algorithm. Prompts are run until two
+     * valid strings of length greater than 0 are entered. And then the pattern is searched for in the search string
+     * and the result is printed.
+     * @param args
+     */
     public static void main(String[] args)
     {
         String txt = "";

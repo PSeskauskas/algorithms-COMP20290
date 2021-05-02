@@ -8,7 +8,11 @@ import Util.generateRandomArray;
 
 import java.util.Arrays;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical6/quickSortEnhanced.java
+ *  Execution: java Practical6/quickSortEnhanced
+ *  */
 
 public class quickSortEnhanced {
     /**
@@ -106,6 +110,12 @@ public class quickSortEnhanced {
         return mid;
     }
 
+    /**
+     * The user is prompted to enter a valid size of an integer array that will be randomly generated using the
+     * generateRandomArray class in the Util package. For enhanced quick sort the array is shuffled to ensure that
+     * it avoids the worst case runtime. The before and after of the array will be printed.
+     * @param args
+     */
     public static void main(String[] args) {
         int size = -1;
         while(size < 1) {

@@ -7,7 +7,11 @@ import Util.generateRandomArray;
 
 import java.util.Arrays;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical2/russianPeasant.java
+ *  Execution: java Practical2/russianPeasant
+ *  */
 
 public class russianPeasant {
 
@@ -34,6 +38,15 @@ public class russianPeasant {
         return result;
     }
 
+    /**
+     * Main method allows the user to choose between having a randomly generated array of size N or to input two integers
+     * to be multiplied themselves.
+     * Once the user chooses, they are prompted to enter the size of the array/2 integers. The size of the array portion
+     * contains error testing.
+     * If a randomly generated array is chosen, then the generateRandomArray class in Util is called and returns the array
+     * of size N. And multiplies each index by index + 1 until it reaches the end of the array
+     * @param args
+     */
     public static void main(String[] args) {
         boolean finished = false;
 

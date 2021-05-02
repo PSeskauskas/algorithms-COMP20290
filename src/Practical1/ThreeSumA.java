@@ -1,8 +1,8 @@
 package Practical1;
 
 /******************************************************************************
- *  Compilation:  javac ThreeSumA.java
- *  Execution:    java ThreeSum input.txt
+ *  Compilation:  javac Practical1/ThreeSumA.java
+ *  Execution:    java Practical1/ThreeSumA ../data/input.txt
  *
  *  @author Robert Sedgewick
  *  @author Kevin Wayne

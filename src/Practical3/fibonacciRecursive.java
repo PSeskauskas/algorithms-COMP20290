@@ -4,7 +4,11 @@ import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical3/fibonacciRecursive.java
+ *  Execution: java Practical3/fibonacciRecursive
+ *  */
 
 public class fibonacciRecursive {
     /**
@@ -20,6 +24,12 @@ public class fibonacciRecursive {
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
+
+    /**
+     * The user is prompted to enter the Nth term of the sequence they'd like to obtain and the fibonacci method is called
+     * with this value for N.
+     * @param args
+     */
     public static void main (String[] args)
     {
         StdOut.println("Please enter the nth term of the fibonacci sequence here");

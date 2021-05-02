@@ -2,11 +2,20 @@ import Util.StdIn;
 import Util.StdOut;
 
 public class Main {
+    /**
+     * Run the Main class printing my information and calling the display menu method and run menu method with the
+     * user input for the options
+     * @param args
+     */
     public static void main(String[] args) {
         StdOut.print("|||| COMP20290 Repository by Patrikas Seskauskas - 19369726 ||||\n");
         displayMenu();
         runMenu(StdIn.readInt());
     }
+
+    /**
+     * displayMenu displays the options that the user can run to test out each algorithm or to exit the program entirely
+     */
     public static void displayMenu() {
         StdOut.println("\nAvailable options for you to run are listed below\n" +
                 "0. Exit the program\n" +
@@ -25,6 +34,13 @@ public class Main {
                 "13. Run Length Encoding - Run Length encoding implementation for input files\n" +
                 "14. Huffman Encoding - Java implementation of the Huffman encoding algorithm for input files\n");
     }
+
+    /**
+     * runMenu method takes in an integer option and either calls the subsequent algorithms main method or prints out
+     * the instructions on how to run that algorithm from the terminal, afterwards, the menu is displayed again and the
+     * runMenu method is called again with a new integer option until the user enters 0 to exit the program.
+     * @param selected an Integer
+     */
     public static void runMenu(int selected) {
         boolean finished = false;
         int pick = 0;

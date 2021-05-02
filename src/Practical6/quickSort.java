@@ -6,7 +6,11 @@ import Util.generateRandomArray;
 
 import java.util.Arrays;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical6/quickSort.java
+ *  Execution: java Practical6/quickSort
+ *  */
 
 public class quickSort {
     /**
@@ -60,6 +64,11 @@ public class quickSort {
         array[i] = temp;
     }
 
+    /**
+     * The user is prompted to enter a valid size of an integer array that will be randomly generated using the
+     * generateRandomArray class in the Util package. The before and after of the array will be printed.
+     * @param args
+     */
     public static void main(String[] args) {
         int size = -1;
         while(size < 1) {

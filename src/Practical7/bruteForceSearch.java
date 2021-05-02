@@ -1,13 +1,14 @@
 package Practical7;
 
-import Util.StdIn;
 import Util.StdOut;
 import Util.Stopwatch;
-
-import java.util.Locale;
 import java.util.Scanner;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical7/bruteForceSearch.java
+ *  Execution: java Practical7/bruteForceSearch
+ *  */
 
 public class bruteForceSearch {
     /**
@@ -37,6 +38,12 @@ public class bruteForceSearch {
         return -1;
     }
 
+    /**
+     * The user is prompted to enter valid strings to be used in the searching algorithm. Prompts are run until two
+     * valid strings of length greater than 0 are entered. And then the pattern is searched for in the search string
+     * and the result is printed.
+     * @param args
+     */
     public static void main(String[] args)
     {
         String txt = "";

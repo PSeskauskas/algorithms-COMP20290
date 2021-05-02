@@ -1,8 +1,8 @@
 package Practical1;
 
 /******************************************************************************
- *  Compilation:  javac ThreeSumB.java
- *  Execution:    java ThreeSumB input.txt
+ *  Compilation:  javac Practical1/ThreeSumB.java
+ *  Execution:    java Practical1/ThreeSumB ../data/input.txt
  *
  *  Reads n integers
  *  and counts the number of triples that sum to exactly 0.

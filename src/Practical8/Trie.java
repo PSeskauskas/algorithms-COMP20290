@@ -3,7 +3,11 @@ package Practical8;
 import Util.StdIn;
 import Util.StdOut;
 
-/* @Author: Patrikas Seskauskas (19369726) */
+/**
+ *  @Author: Patrikas Seskauskas (19369726)
+ *  Compilation: javac Practical8/Trie.java
+ *  Execution: java Practical8/Trie
+ *  */
 
 public class Trie {
     /* 26 characters in English alphabet */
@@ -67,6 +71,12 @@ public class Trie {
             return (searchNode != null && searchNode.isEndOfWord);
         }
 
+        /**
+         * Main method to take in user input for the number of strings that will be entered into the Trie and subsequently
+         * each string in the Trie. The trie is then created and the user is prompted to enter search string or 0 to exit
+         * the program
+         * @param args
+         */
         public static void main(String[] args) {
             int size = -1;
             while(size < 1) {
@@ -106,6 +116,11 @@ public class Trie {
             }
         }
     }
+
+    /**
+     * Call the main method in the static class
+     * @param args
+     */
     public static void main(String[] args) {
         TrieNode.main(null);
     }
