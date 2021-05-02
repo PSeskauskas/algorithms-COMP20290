@@ -1,7 +1,7 @@
 package Assignment;
 
 /******************************************************************************
- *  Compilation:  javac Huffman.java
+ *  Compilation:  javac Assignment/Huffman.java
  *
  *  Compress or expand a binary input stream using the Huffman algorithm.
  *
@@ -9,25 +9,26 @@ package Assignment;
  *
  ******************************************************************************/
 
-import Util.BinaryStdIn;
-import Util.BinaryStdOut;
-import Util.MinPQ;
-
-/**
- *  Add in your information about each method etc. here
- *
- *
- *  @author Patrikas Seskauskas
- */
+import Util.*;
 
 public class HuffmanAlgorithm {
-    // alphabet size of extended ASCII
+    /**
+     * Variables that will hold the input and output files
+     */
+    private static BinaryIn binaryIn;
+    private static BinaryOut binaryOut;
+
+    /**
+     * Alphabet size of extended ASCII variable
+     */
     private static final int R = 256;
 
     // Do not instantiate.
     private HuffmanAlgorithm() {}
 
-    // Huffman trie node
+    /**
+     * Huffman trie node nested class
+     */
     private static class Node implements Comparable<Node> {
         private final char ch;
         private final int freq;
@@ -40,13 +41,20 @@ public class HuffmanAlgorithm {
             this.right = right;
         }
 
-        // is the node a leaf node?
+        /**
+         * Method to check if a node is a leaf node or not
+         * @return a boolean representing if a node is a leaf or not
+         */
         private boolean isLeaf() {
             assert ((left == null) && (right == null)) || ((left != null) && (right != null));
             return (left == null) && (right == null);
         }
 
-        // compare, based on frequency
+        /**
+         * Comparison function comparing two frequencies
+         * @param that of type Node
+         * @return an integer conveying the difference between the frequencies
+         */
         public int compareTo(Node that) {
             return this.freq - that.freq;
         }
@@ -59,7 +67,7 @@ public class HuffmanAlgorithm {
      */
     public static void compress() {
         // read the input
-        char[] input = BinaryStdIn.readString().toCharArray();
+        char[] input = binaryIn.readString().toCharArray();
         // tabulate frequency counts
         int[] frequency = new int[R];
         for(char c : input) {
@@ -73,14 +81,15 @@ public class HuffmanAlgorithm {
         // print trie for decoder
         writeTrie(root);
         // print number of bytes in original uncompressed message
-        BinaryStdOut.write(input.length);
+        binaryOut.write(input.length);
         // use Huffman code to encode input
-        for(char c : input) {
-            for(char code : codes[c].toCharArray()) {
-                BinaryStdOut.write(code == '1');
+        for (char c : input) {
+            String code = codes[c];
+            for (int j = 0; j < code.length(); j++) {
+                binaryOut.write(code.charAt(j) == '1');
             }
         }
-        BinaryStdOut.close();
+        binaryOut.close();
     }
 
     /**
@@ -91,25 +100,29 @@ public class HuffmanAlgorithm {
         // read in Huffman trie from input stream
         Node root = readTrie();
         // number of bytes to write
-        int numberOfBytes = BinaryStdIn.readInt();
+        int numberOfBytes = binaryIn.readInt();
         // decode using the Huffman trie
         int i = 0;
         while(i < numberOfBytes) {
             Node node = root;
             while(!node.isLeaf()) {
-                if(!BinaryStdIn.readBoolean()) {
+                if(!binaryIn.readBoolean()) {
                     node = node.left;
                 } else {
                     node = node.right;
                 }
             }
-            BinaryStdOut.write(node.ch, 8);
+            binaryOut.write(node.ch, 8);
             i++;
         }
-        BinaryStdOut.close();
+        binaryOut.close();
     }
 
-    // build the Huffman trie given frequencies
+    /**
+     * Building a Huffman trie given an array of frequencies
+     * @param freq an integer array
+     * @return a Node
+     */
     private static Node buildTrie(int[] freq) {
         // initialze priority queue with singleton trees
         MinPQ<Node> pq = new MinPQ<Node>();
@@ -133,19 +146,27 @@ public class HuffmanAlgorithm {
         return pq.delMin();
     }
 
-    // write bitstring-encoded trie to standard output
+    /**
+     * Write bitstring-encoded trie to standard output
+     * @param x the root Node
+     */
     private static void writeTrie(Node x) {
         if (x.isLeaf()) {
-            BinaryStdOut.write(true);
-            BinaryStdOut.write(x.ch, 8);
+            binaryOut.write(true);
+            binaryOut.write(x.ch, 8);
             return;
         }
-        BinaryStdOut.write(false);
+        binaryOut.write(false);
         writeTrie(x.left);
         writeTrie(x.right);
     }
 
-    // make a lookup table from symbols and their encodings
+    /**
+     * Make a lookup table from symbols and their encodings
+     * @param st an array of strings
+     * @param x a Node
+     * @param s a String
+     */
     private static void buildCode(String[] st, Node x, String s) {
         if (!x.isLeaf()) {
             buildCode(st, x.left,  s + '0');
@@ -156,10 +177,14 @@ public class HuffmanAlgorithm {
         }
     }
 
+    /**
+     * Read the bitstring-encoded trie
+     * @return a Node
+     */
     private static Node readTrie() {
-        boolean isLeaf = BinaryStdIn.readBoolean();
+        boolean isLeaf = binaryIn.readBoolean();
         if (isLeaf) {
-            return new Node(BinaryStdIn.readChar(), -1, null, null);
+            return new Node(binaryIn.readChar(), -1, null, null);
         }
         else {
             return new Node('\0', -1, readTrie(), readTrie());
@@ -168,9 +193,30 @@ public class HuffmanAlgorithm {
 
     /**
      * Sample client that calls {@code compress()} if the command-line
-     * argument is "compress" an {@code decompress()} if it is "decompress".
+     * argument is "compress" and {@code decompress()} if it is "decompress".
+     * With error checking printing out the correct usage if the user enters incorrect arguments to the program
      *
      * @param args the command-line arguments
      */
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        if(args.length != 3 || !(args[0].equals("compress") || args[0].equals("decompress"))) {
+            StdOut.println("Error, incorrect usage.\nMake sure you're in the source directory when running the huffman code.\n" +
+                    "Compilation: javac Assignment/HuffmanAlgorithm.java\n" +
+                    "Compression Execution: java Assignment/HuffmanAlgorithm compress Assignment/inputFile Assignment/outputFile\n" +
+                    "Decompress Execution: java Assignment/HuffmanAlgorithm decompress Assignment/inputFile Assignment/outputFile");
+        }
+        Stopwatch timer = new Stopwatch();
+        binaryIn = new BinaryIn(args[1]);
+        binaryOut = new BinaryOut(args[2]);
+        if(args[0].equals("compress")) {
+            compress();
+            StdOut.println("elapsed time = " + timer.elapsedTime());
+            StdOut.println("Original file = " + args[1] + "\nCompressed file = " + args[2]);
+        }
+        else if(args[0].equals("decompress")) {
+            decompress();
+            StdOut.println("elapsed time = " + timer.elapsedTime());
+            StdOut.println("Compressed file = " + args[1] + "\nDecompressed file = " + args[2]);
+        }
+    }
 }

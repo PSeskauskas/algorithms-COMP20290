@@ -31,8 +31,7 @@ public class Main {
                 "10. Brute Force Search - Finding a given pattern in a string using brute force\n" +
                 "11. Knuth-Morris-Pratt Search - Finding a given pattern in a string using the KMP search algorithm\n" +
                 "12. Trie Search - Finding if a string is in a generated Trie\n" +
-                "13. Run Length Encoding - Run Length encoding implementation for input files\n" +
-                "14. Huffman Encoding - Java implementation of the Huffman encoding algorithm for input files\n");
+                "13. Run Length Encoding - Run Length encoding implementation for input files\n");
     }
 
     /**
@@ -174,8 +173,6 @@ public class Main {
                 }
                 displayMenu();
                 runMenu(StdIn.readInt());
-                break;
-            case 14:
                 break;
             default:
                 StdOut.print("Error, please select a valid option from the list below\n");

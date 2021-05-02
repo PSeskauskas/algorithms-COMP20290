@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b7c422b-8ceb-4a8e-997b-2700a172ff98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment/HuffmanAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment/HuffmanAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment/mobydick.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/graphs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Assignment" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -52,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\src\Assignment" />
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\graphs" />
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\src" />
       <recent name="C:\Users\patri\algorithms20290-2021-repository-PSeskauskas\wk6-mergeSort" />
@@ -70,13 +74,13 @@
       <recent name="Practical8" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.quickSortEnhanced">
-    <configuration name="insertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Practical4.insertionSort" />
+  <component name="RunManager" selected="Application.HuffmanAlgorithm">
+    <configuration name="HuffmanAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignment.HuffmanAlgorithm" />
       <module name="algorithms20290-2021-repository-PSeskauskas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Practical4.*" />
+          <option name="PATTERN" value="Assignment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,13 +148,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.mergeSort" />
+      <item itemvalue="Application.HuffmanAlgorithm" />
+      <item itemvalue="Application.mergeSortEnhanced" />
+      <item itemvalue="Application.quickSort" />
+      <item itemvalue="Application.quickSortEnhanced" />
+      <item itemvalue="Application.stalinSort" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HuffmanAlgorithm" />
         <item itemvalue="Application.quickSortEnhanced" />
         <item itemvalue="Application.quickSort" />
         <item itemvalue="Application.mergeSortEnhanced" />
         <item itemvalue="Application.stalinSort" />
-        <item itemvalue="Application.insertionSort" />
       </list>
     </recent_temporary>
   </component>
