@@ -1,7 +1,10 @@
 package Assignment;
 
 /******************************************************************************
- *  Compilation:  javac Assignment/Huffman.java
+ *  Compilation:  javac Assignment/HuffmanAlgorithm.java
+ *
+ *  Execution: java Assignment/HuffmanAlgorithm compress Assignment/medTale.txt Assignment/medTaleComp.txt
+ *             java Assignment/HuffmanAlgorithm decompress Assignment/medTaleComp.txt Assignment/medTaleDecomp.txt
  *
  *  Compress or expand a binary input stream using the Huffman algorithm.
  *
@@ -200,14 +203,14 @@ public class HuffmanAlgorithm {
      */
     public static void main(String[] args) {
         if(args.length != 3 || !(args[0].equals("compress") || args[0].equals("decompress"))) {
-            StdOut.println("Error, incorrect usage.\nMake sure you're in the source directory when running the huffman code.\n" +
+            throw new IllegalArgumentException("Error, incorrect usage.\nMake sure you're in the source directory when running the huffman code.\n" +
                     "Compilation: javac Assignment/HuffmanAlgorithm.java\n" +
                     "Compression Execution: java Assignment/HuffmanAlgorithm compress Assignment/inputFile Assignment/outputFile\n" +
                     "Decompress Execution: java Assignment/HuffmanAlgorithm decompress Assignment/inputFile Assignment/outputFile");
         }
-        Stopwatch timer = new Stopwatch();
         binaryIn = new BinaryIn(args[1]);
         binaryOut = new BinaryOut(args[2]);
+        Stopwatch timer = new Stopwatch();
         if(args[0].equals("compress")) {
             compress();
             StdOut.println("elapsed time = " + timer.elapsedTime());
