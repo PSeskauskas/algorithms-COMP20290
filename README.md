@@ -2,16 +2,14 @@
 ### Author: Patrikas Seskauskas - (19369726)
 
 Java implementations of algorithms given in weekly practicals for COMP20290.
- <br> Practical questions are completed in the practical document given each week and saved as PDFs in the practicalAnswers folder.
 
-## Getting Started
-### Prerequisites
+### Installation
 * Please install JDK 8 from Oracle [here](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html), 
 as I used JDK 8 for the entirety of this module.
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) was my IDEA of choice for this module.
 
 ### Build and Run
-Clone the repository into your IDE. Every algorithm was separated into separate classes. Each class is in its corresponding package depending on which practical the algorithm was introduced. Therefore, each algorithm can be built and run separately.
+Clone the repository into your IDE. Every algorithm was separated into separate classes. Each class is in its corresponding package depending on which practical the algorithm was introduced. Therefore, each algorithm can be built and run separately. Otherwise, [Main.java](./src/Main.java) can be run to give an overview of every algorithm implemented in my repository
 
 ### Util package 
 The [Util](src/Util) package in [src](./src) contains all helper classes needed to run each algorithm, i.e., reading in standard input, generating a random array of size N, stopwatch etc.
@@ -29,7 +27,7 @@ The [practicalAnswers](./practicalAnswers) package contains all of the PDF files
 The [Tests](./src/Tests) package contains basic tests that I created to test each non-void algorithm that it was returning the correct output. 
 
 ## Algorithms
-Summary of the algorithms implemented in the [src](./src) directory.
+Table of the algorithms implemented in the [src](./src) directory.
  <br> **NOTE:** The algorithms listed below either take in user input/command line arguments.
 
 | Code Package | Topic + Link to PDF | File Name | Summary |  
@@ -50,5 +48,6 @@ Summary of the algorithms implemented in the [src](./src) directory.
 | [Practical7](./src/Practical7) | [Substring Search](./practicalAnswers/Practical7-SubstringSearch.pdf) | [bruteForceSearch](./src/Practical7/bruteForceSearch.java) | The brute-force search algorithm starts at the beginning of the string and compares each character from the pattern against the search string. Once the algorithm finishes checking the first pattern then increment the pointer to the next character in the string and start the process again. <br> Time Complexity = O(m * n)
 | | | [knuthMorrisPrattSearch](./src/Practical7/knuthMorrisPrattSearch.java) | The KMP search algorithm improves on the brute-force algorithm by having prior information about the text being searched. If the first x characters have been matched and then a mismatch is found. The algorithm can skip some iterations for where no match is possible and it can skip some iterations in the inner loop. <br> Time Complexity = O(n)
 | [Practical8](./src/Practical8) | [Tries](./practicalAnswers/Practical8-Tries.pdf) | [Trie](./src/Practical8/Trie.java) | Java implementation of a Trie. The search algorithm goes through the children of the trie, and iterates through the string and checks each character with the nodes of the trie. If the character isn't a part of a sub-trie, then return false, if the end of the string is reached, return true. <br> Time Complexity = O(n)
-| [Practical9](./src/Practical9) | [Run Length Compression](./practicalAnswers/Practical9-RunLengthCompression.pdf) | [RunLength](./src/Practical9/RunLength.java) | Java implementation of Run Length Compression compression and decompression of binary input from standard input
-| | | [RunLengthEncoding](./src/Practical9/RunLengthEncoding.java) | Java implementation of Run Length Encoding, compressing a user input string to characters with character counts, i.e., user input of "aaaaabbbbbccccc" is compressed to "a5b5c5"
+| [Practical9](./src/Practical9) | [Run Length Compression](./practicalAnswers/Practical9-RunLengthCompression.pdf) | [RunLength](./src/Practical9/RunLength.java) | Java implementation of Run Length Compression compression and decompression of binary input from standard input. <br> Time Complexity = O(n)
+| | | [RunLengthEncoding](./src/Practical9/RunLengthEncoding.java) | Java implementation of Run Length Encoding, compressing a user input string to characters with character counts, i.e., user input of "aaaaabbbbbccccc" is compressed to "a5b5c5". <br> Time Complexity = O(n)
+| [Assignment](./src/Assignment) | [Assignment Sheet](./src/Assignment/COMP20290-Assignment-2-Compression.pdf) | [Huffman Algorithm](./src/Assignment/HuffmanAlgorithm.java) | Java implementation of the Huffman compression/decompression algorithm using tries to obtain a lower number of bits for characters that occur most frequently. <br> Time Complexity = O(n log n)

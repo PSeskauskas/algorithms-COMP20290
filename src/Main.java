@@ -31,7 +31,8 @@ public class Main {
                 "10. Brute Force Search - Finding a given pattern in a string using brute force\n" +
                 "11. Knuth-Morris-Pratt Search - Finding a given pattern in a string using the KMP search algorithm\n" +
                 "12. Trie Search - Finding if a string is in a generated Trie\n" +
-                "13. Run Length Encoding - Run Length encoding implementation for input files\n");
+                "13. Run Length Encoding - Run Length encoding implementation for input files\n" +
+                "14. Huffman Compression/Decompression - Huffman implementation using files from standard input");
     }
 
     /**
@@ -171,6 +172,16 @@ public class Main {
                         finished = true;
                     }
                 }
+                displayMenu();
+                runMenu(StdIn.readInt());
+                break;
+            case 14:
+                StdOut.println("To run the Huffman program, the terminal must be used to pass in files as arguments\n" +
+                        "Available files in the Assignment package are listed below.\n" +
+                        "genomeVirus.txt, medTale.txt, mobydick.txt, q32x48.bin\n" +
+                        "Compilation: javac Assignment/HuffmanAlgorithm.java\n" +
+                        "Compression Execution: java Assignment/HuffmanAlgorithm compress Assignment/inputFile Assignment/outputFile\n" +
+                        "Decompress Execution: java Assignment/HuffmanAlgorithm decompress Assignment/inputFile Assignment/outputFile");
                 displayMenu();
                 runMenu(StdIn.readInt());
                 break;
