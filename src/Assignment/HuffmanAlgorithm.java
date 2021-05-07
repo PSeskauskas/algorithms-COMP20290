@@ -14,6 +14,26 @@ package Assignment;
 
 import Util.*;
 
+/**
+ * Node Class: Nested node class for the nodes of the Trie containing variables that are used by the node and an isLeaf
+ * and compareTo method for the node.
+ *
+ * Compress: Reads in the bits from the data stream and creates a frequency array for each character. Then create a Trie
+ * from the character frequencies. Subsequently, create the codeword table and then encode the input to the output file.
+ *
+ * Decompress: Reads in the huffman Trie that was created during the compression. Decode each codeword by iterating through
+ * the trie and obtaining the original character.
+ *
+ * buildTrie: Creates a huffman trie from the given frequencies using a priority queue, merging the smallest subtrees
+ * together until each character is represented in the Trie.
+ *
+ * writeTrie: Write the Trie to standard output, i.e., when compressing the standard input file.
+ *
+ * buildCode: Build a codeword table containing every character and their corresponding frequencies.
+ *
+ * readTrie: Read the encoded Trie from standard input when running the decompress method.
+ */
+
 public class HuffmanAlgorithm {
     /**
      * Variables that will hold the input and output files
